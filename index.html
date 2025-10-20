@@ -3,32 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio de 2HOT4TV</title>
+  <title>Portfolio | 2HOT4TV</title>
   <style>
+    :root {
+      --primary: #007aff;
+      --bg-dark: #0d0d0d;
+      --bg-light: #1a1a1a;
+      --text-light: #f5f5f5;
+      --accent: #ff3b30;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: system-ui, sans-serif;
-      background: linear-gradient(to bottom right, #111, #444);
-      color: white;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
       text-align: center;
-      padding: 80px 20px;
+      padding: 60px 20px;
     }
+
+    header {
+      margin-bottom: 50px;
+    }
+
+    img.profile {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid var(--primary);
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(0,122,255,0.4);
+    }
+
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 2rem;
+      margin-bottom: 10px;
     }
-    p {
-      font-size: 1.1rem;
-      opacity: 0.8;
+
+    p.tagline {
+      font-size: 1rem;
+      color: #aaa;
+      margin-bottom: 40px;
     }
-    a {
-      color: #00bfff;
+
+    section.projects {
+      display: grid;
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .card {
+      background: var(--bg-light);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 25px;
+      background: var(--primary);
+      color: white;
+      border-radius: 30px;
       text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--accent);
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #777;
     }
   </style>
 </head>
+
 <body>
-  <h1>Bienvenue sur mon portfolio 🎨</h1>
-  <p>Découvrez mes projets, mes créations et mes expériences.</p>
-  <p><a href="https://2hot.ca" target="_blank">Retour à 2HOT Community</a></p>
+  <header>
+    <img src="https://2hot.ca/images/logo.png" alt="Profil" class="profile">
+    <h1>Renel Jean — 2HOT4TV</h1>
+    <p class="tagline">Entrepreneur · Créateur digital · Développeur Laravel & Vue</p>
+  </header>
+
+  <section class="projects">
+    <div class="card">
+      <img src="https://source.unsplash.com/random/400x300?tech" alt="Projet 1">
+      <div class="card-content">
+        <h3>Projet TwinMind</h3>
+        <p>Avatar intelligent et identité numérique. Vue + Laravel + AI.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://source.unsplash.com/random/400x300?community" alt="Projet 2">
+      <div class="card-content">
+        <h3>2HOT Community</h3>
+        <p>Plateforme sociale et économique pour la communauté afro-mondiale.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://source.unsplash.com/random/400x300?creative" alt="Projet 3">
+      <div class="card-content">
+        <h3>Portfolio Studio</h3>
+        <p>Site de présentation interactif, design épuré et professionnel.</p>
+      </div>
+    </div>
+  </section>
+
+  <a href="mailto:contact@2hot.ca" class="btn">📬 Me contacter</a>
+
+  <footer>
+    © 2025 2HOT4TV · Hébergé sur <a href="https://pages.github.com/" target="_blank" style="color: var(--primary); text-decoration:none;">GitHub Pages</a>
+  </footer>
 </body>
 </html>
