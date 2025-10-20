@@ -120,13 +120,22 @@
 </header>
 
   <section class="projects">
-    <div class="card">
-      <img src="images/twinmind.glb" alt="Projet 1">
-      <div class="card-content">
-        <h3>Projet TwinMind</h3>
-        <p>Avatar intelligent et identité numérique. Vue + Laravel + AI.</p>
-      </div>
+  <div class="card">
+    <!-- ✅ Affichage du modèle 3D TwinMind -->
+    <model-viewer
+      src="images/twinmind.glb"
+      alt="Projet TwinMind 3D"
+      auto-rotate
+      camera-controls
+      style="width: 100%; height: 260px; background: #111; border-bottom: 1px solid rgba(255,255,255,0.1);">
+    </model-viewer>
+
+    <div class="card-content">
+      <h3>Projet TwinMind</h3>
+      <p>Avatar intelligent et identité numérique. Vue + Laravel + AI.</p>
     </div>
+  </div>
+</section>
 
     <div class="card">
       <img src="images/twinmind.jpg" alt="Projet 2">
